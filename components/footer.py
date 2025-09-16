@@ -3,6 +3,7 @@ from nicegui import ui
 
 
 def show_footer():
+
     ui.add_head_html('<script src="https://kit.fontawesome.com/ccba89e5d4.js" crossorigin="anonymous"></script>')
 
     with ui.element("div").classes("w-full bg-blue-800 items-center justify-center px-10 py-5"):
@@ -10,7 +11,7 @@ def show_footer():
             ui.label("Event").classes("text-white")
             ui.label("Hive").classes("text-purple-400")
 
-        with ui.row().classes("items-center justify-center text-white mb-8"):
+        with ui.row().classes("items-center justify-center text-white mb-8 gap-0"):
             ui.input(placeholder="Enter your mail").props("outlined").classes("bg-white w-64")
             ui.button("Subscribe").props("color=deep-purple-7").classes("px-20 py-4")
 
@@ -28,5 +29,5 @@ def show_footer():
                 ui.html('<i class="fa-brands fa-twitter"></i>')
 
             with ui.row():
-                ui.html("<p>Non Copyrighted &copy; 2025 Upload by dr. crack studio</p>")
+                ui.html("<p>© Copyright 2025 | Emmanuella Dodoo | All Rights Reserved</p>")
 

@@ -1,5 +1,7 @@
 from nicegui import ui
 
+@ui.page("/signin")
+
 def show_signin_page():
     #  Adding the fontawesome icons
     ui.add_head_html("<script src='https://kit.fontawesome.com/ccba89e5d4.js' crossorigin='anonymous'></script>")
