@@ -30,9 +30,14 @@ def show_home_page():
                 ["Select event type", "Conference", "Workshop", "Concert"],
                 value="Select event type",
                 with_input=True,
-            ).props("Outlined dense").classes("w-1/4 bg-white rounded Ig text-grey-700")
+            ).props("Outlined dense").classes("w-full bg-white rounded Ig text-grey-700")
 
         #  Location select
+        ui.select(
+                ["Select event type", "Conference", "Workshop", "Concert"],
+                value="Select event type",
+                with_input=True,
+            ).props("Outlined dense").classes("w-1/4 bg-white rounded Ig text-grey-700")
 
         #  Date/time input
         ui.input(label="Choose date and time").props("outlined dense").classes(
@@ -44,6 +49,9 @@ def show_home_page():
             "bg-purple-600 text-white rounded-sm p-3 hover:bg-indigo-700"
             "hover:scale-105 transition-all shadow-Ig"
         )
+
+
+        
 
         #     ui.select(
         #         [1,2,3], ).classes("w-60 bg-white",
@@ -70,7 +78,75 @@ def show_home_page():
             with ui.card():
                 ui.image("/assets/iso.jpg").classes("w-full h-40 object-cover")
                 ui.button("Register").classes(
+                    "w-full bg-pink-300 text-white py-2 rounded-ig"
+                )
+                
+                # CTA button centered
+        ui.button("Load more...").classes(
+            "mt-12 px-10 py-3 bg-pink hover:bg-blue-700 text-white "
+            "rounded-md text-base font-medium mx-auto"
+        )
+
+
+    with ui.row().classes("relative w-full h-[30%] mt-16  py-12 flex flex-row items-center justify-center"):
+        # with ui.element("div").classes('w-1/3 relative h-full'):
+            ui.image("/assets/ierr.png")
+            
+
+        # with ui.column().classes("items-center w-1/3 justify-center text-center flex flex-col"):
+        #     ui.label("Make your own event").classes("text-white text-3xl font-bold")   
+        #     ui.label("lorem ipsum dolor sit amet consectetur adipiscing elit").classes("justify-left text-white text-sm")
+        #     ui.button("Create Events").classes("text-white justify-left bg-purple-200")
+
+            # Brand Section
+    with ui.element('div').classes('p-4 border-2 border-gray-300 rounded-md w-full'):
+        ui.image("/assets/image1.png")
+       
+# Trending colleges
+
+    with ui.row().classes("flex flex-row justify-between w-full items-center"):
+        ui.label("Trending College").classes("text-4xl text-blue-500 font-bold")
+    with ui.grid(columns=3).classes("w-full"):
+        for i in range(3):
+            with ui.card():
+                ui.image("/assets/unileed.jpg").classes("w-full h-40 object-cover")
+                ui.button("Register").classes(
                     "w-full bg-blue-300 text-white py-2 rounded-ig"
                 )
+
+
+
+                # Our Blogs
+
+    with ui.element('div').classes('p-4 border-2 border-white rounded-md'):            
+        with ui.row().classes("flex flex-row justify-between w-full items-center"):
+            ui.label("Our blog").classes("text-4xl font-bold")
+        
+        # List of images (replace with your own image paths)
+        images = [
+            "/assets/vblog.jpg",
+            "/assets/vlog1.png",
+            "/assets/vlog2.jpg"
+        ]
+        
+        with ui.grid(columns=3).classes("w-screen gap-4"):
+            for img in images:
+                with ui.card():
+                    ui.image(img).classes("w-full h-50 object-cover")
+                    ui.button("Register").classes(
+                        "w-full bg-blue-300 text-white py-2 rounded-lg"
+                    )
+    # with ui.element('div').classes('p-4 border-2 border-white rounded-md'):            
+    #  with ui.row().classes("flex flex-row justify-between w-full items-center"):
+    #     ui.label("Our blog").classes("text-4xl font-bold")
+     
+    # with ui.grid(columns=3).classes("w-full"):
+    #     for i in range(3):
+    #         with ui.card():
+    #             ui.image("/assets/vblog.jpg").classes("w-full h-40 object-cover")
+    #             ui.button("Register").classes(
+    #                 "w-full bg-blue-300 text-white py-2 rounded-ig"
+                # )            
+
 
     show_footer()

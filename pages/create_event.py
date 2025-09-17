@@ -4,13 +4,10 @@ from components.footer import show_footer
 
 @ui.page("/create_event")
 
-# def show_create_event_page():
-#     ui.label("This is the Create Event page")
-
 # --- REUSABLE EVENT FORM COMPONENT ---
 def show_create_event():
-    with ui.column().classes('w-full max-w-4xl mx-auto p-8 my-10 bg-white rounded-xl shadow-lg'):
-        ui.label('Create Event').classes('text-3xl font-bold text-center text-gray-800 mb-8')
+    with ui.column().classes('w-full max-w-4xl mx-auto p-8 my-10 bg-blue-100 rounded-xl shadow-lg'):
+        ui.label('Create Event').classes('text-3xl font-bold text-center text-pink-600 mb-8')
 
         with ui.row().classes('w-full flex-wrap gap-4'):
             # Left column for inputs
@@ -19,7 +16,7 @@ def show_create_event():
                 ui.input(placeholder='Event Title').classes('w-full rounded-lg border-2 border-gray-200 p-3')
 
                 ui.label('Event Venue').classes('text-base font-semibold text-gray-700')
-                ui.input(placeholder='Event Venue').classes('w-full rounded-lg border-2 border-gray-200 p-3')
+                ui.input(placeholder='Event Venue').classes('w-full rounded-lg border-2 border-grey p-3')
                 
                 # Start and End Date
                 with ui.row().classes('w-full gap-4'):
