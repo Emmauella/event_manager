@@ -8,7 +8,7 @@ def show_footer():
 
     with ui.element("div").classes("w-full bg-blue-800 items-center justify-center px-10 py-5"):
         with ui.row().classes("items-center justify-center text-4xl font-bold mb-4"):
-            ui.label("Event").classes("text-white")
+            ui.label("Event").classes("text-blue-100")
             ui.label("Hive").classes("text-pink-400")
 
         with ui.row().classes("items-center justify-center text-white mb-8 gap-0"):

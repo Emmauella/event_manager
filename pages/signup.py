@@ -7,7 +7,7 @@ def show_signup_page():
      ui.add_head_html("<script src='https://kit.fontawesome.com/ccba89e5d4.js' crossorigin='anonymous'></script>")
      
      with ui.element("div").classes("w-full h-screen flex flex-row m-0 p-0 gap-0"):
-        with ui.element("div").classes("bg-[url('https://cdn.pixabay.com/photo/2018/01/15/21/50/concert-3084876_1280.jpg')] bg-cover bg-center flex flex-col w-1/2 h-full justify-center items-center"):
+        with ui.element("div").classes("bg-[url('https://images.unsplash.com/photo-1492684223066-81342ee5ff30?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZXZlbnR8ZW58MHx8MHx8fDA%3D.jpg')] bg-cover bg-center flex flex-col w-1/2 h-full justify-center items-center"):
             with ui.column().classes("items-center"):
                 ui.label("Welcome back").classes("text-white text-4xl font-bold mb-4")
                 ui.label("To keep connected with us provide us with your information").classes("text-white mb-4")
@@ -20,10 +20,10 @@ def show_signup_page():
             
         with ui.column().classes('w-1/2 h-full bg-white flex flex-col justify-center items-center p-4'):
             with ui.row().classes('items-center'):
-                ui.label('Event').classes('text-2xl font-bold text-gray-800')
-                ui.label('Hive').classes('text-2xl font-bold text-orange-500')
+                ui.label('Event').classes('text-2xl font-bold text-blue-800')
+                ui.label('Hive').classes('text-2xl font-bold text-pink-500')
 
-            ui.label('Sign Up to Event Hive').classes('text-3xl font-bold text-gray-800')
+            ui.label('Sign Up to Event Hive').classes('text-3xl font-bold text-grey-800')
 
             # Input fields
             ui.input('YOUR NAME', placeholder='Enter your name').classes('w-3/4').props("outlined")
@@ -31,6 +31,6 @@ def show_signup_page():
             ui.input('PASSWORD', placeholder='Enter your password', password=True, password_toggle_button=True).classes('w-3/4').props("outlined")
             ui.input('CONFIRM PASSWORD', placeholder='Enter your password', password=True, password_toggle_button=True).classes('w-3/4 mb-2').props("outlined")
 
-            ui.button('Sign Up', icon='fa-solid fa-user-plus').classes('w-1/4 text-white font-bold rounded-sm shadow').props("color=orange-7")
+            ui.button('Sign Up', icon='fa-solid fa-user-plus').classes('w-1/4 text-white font-bold rounded-sm shadow').props("color=blue-7")
             ui.label('Or').classes('text-gray-500')
-            ui.button('Sign up with Google', icon='fa-brands fa-google').classes("px-8").props("color=blue-11")
+            ui.button('Sign up with Google', icon='fa-brands fa-google').classes("px-8").props("color=pink-500")
